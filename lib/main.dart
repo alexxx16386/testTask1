@@ -9,8 +9,6 @@ import 'package:tz_flutter/screens/home/home_screen.dart';
 import 'blocs/simple_bloc_observer.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-
   EquatableConfig.stringify = kDebugMode;
   Bloc.observer = SimpleBlocObsever();
   runApp(MyApp());

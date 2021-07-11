@@ -42,9 +42,6 @@ class DownloaderBloc extends Bloc<DownloaderEvent, DownloaderState> {
       status: DownloaderStatus.fileAdded,
       files: _fileRepository.getFiles(),
     );
-    yield state.copyWith(
-      status: DownloaderStatus.initial,
-    );
   }
 
   Stream<DownloaderState> _mapDownloaderDeleteTask(
@@ -56,7 +53,7 @@ class DownloaderBloc extends Bloc<DownloaderEvent, DownloaderState> {
       files: _fileRepository.getFiles(),
     );
     yield state.copyWith(
-      status: DownloaderStatus.initial,
+      status: DownloaderStatus.nothing,
     );
   }
 
@@ -73,7 +70,7 @@ class DownloaderBloc extends Bloc<DownloaderEvent, DownloaderState> {
       files: _fileRepository.getFiles(),
     );
     yield state.copyWith(
-      status: DownloaderStatus.initial,
+      status: DownloaderStatus.nothing,
     );
   }
 
@@ -86,7 +83,7 @@ class DownloaderBloc extends Bloc<DownloaderEvent, DownloaderState> {
       files: _fileRepository.getFiles(),
     );
     yield state.copyWith(
-      status: DownloaderStatus.initial,
+      status: DownloaderStatus.nothing,
     );
   }
 
@@ -97,7 +94,7 @@ class DownloaderBloc extends Bloc<DownloaderEvent, DownloaderState> {
       status: DownloaderStatus.saved,
     );
     yield state.copyWith(
-      status: DownloaderStatus.initial,
+      status: DownloaderStatus.nothing,
     );
   }
 

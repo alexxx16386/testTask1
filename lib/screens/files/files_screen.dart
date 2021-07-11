@@ -21,8 +21,10 @@ class _FilesScreenState extends State<FilesScreen> {
           floatingActionButton: FloatingActionButton(
             child: Icon(Icons.add),
             onPressed: () {
-              if (state.getCount < 30)
-                context.read<DownloaderBloc>().add(DownloaderAddTask());
+              if (state.files.length < 30)
+                setState(() {
+                  context.read<DownloaderBloc>().add(DownloaderAddTask());
+                });
             },
           ),
           body: ListView.builder(

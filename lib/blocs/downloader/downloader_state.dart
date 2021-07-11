@@ -1,6 +1,13 @@
 part of 'downloader_bloc.dart';
 
-enum DownloaderStatus { initial, fileLoaded, fileAdded, fileDeleted, saved }
+enum DownloaderStatus {
+  initial,
+  nothing,
+  fileLoaded,
+  fileAdded,
+  fileDeleted,
+  saved
+}
 
 class DownloaderState extends Equatable {
   final List<FileModel> files;
